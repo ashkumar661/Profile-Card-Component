@@ -1,0 +1,112 @@
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap');
+
+:root {
+    --Dark-cyan: hsl(185, 75%, 39%);
+    --Very-dark-desaturated-blue: hsl(229, 23%, 23%);
+    --Dark-grayish-blue: hsl(227, 10%, 46%);
+
+    --Dark-gray: hsl(0, 0%, 59%);
+}
+
+*,
+::after,
+::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--Dark-cyan);
+    min-height: 100vh;
+    font-family: 'Kumbh Sans', sans-serif;
+    font-weight: 400;
+    color: var(--Dark-grayish-blue);
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url(./images/bg-pattern-top.svg), url(./images/bg-pattern-bottom.svg);
+    background-repeat: no-repeat no-repeat;
+    background-position: right 52vw bottom 37vh, left 49vw top 51vh;
+}
+
+.card-content {
+    z-index: 2;
+    max-width: 350px;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 1rem;
+    text-align: center;
+    margin: 1rem;
+}
+
+.card-head img {
+    width: 100%;
+    border-radius: 1rem 1rem 0 0;
+}
+
+.card-body figure {
+    margin-top: -67px;
+    padding: 5px;
+    background-color: white;
+    border-radius: 50%;
+}
+
+.card-body figure img {
+    width: 100%;
+    border-radius: 50%;
+}
+
+.card-body h1 {
+    margin-top: 1rem;
+    font-weight: 700;
+    color: var(--Very-dark-desaturated-blue);
+    font-size: 18px;
+}
+
+.card-body h1 span {
+    color: var(--Dark-grayish-blue);
+}
+
+.card-body p {
+    margin: 0.5rem;
+    font-size: 14px;
+}
+
+hr {
+    width: 100%;
+    margin-top: 1rem;
+    border: 1px solid hsla(0, 0%, 59%, 0.3);
+}
+
+.card-footer {
+    width: 100%;
+    padding: 1.5rem 3rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+.stat-head {
+    color: var(--Very-dark-desaturated-blue);
+    font-weight: 700;
+    font-size: 18px;
+    margin-bottom: 0.3rem;
+}
+
+.stat-para {
+    font-size: 13px;
+    letter-spacing: 1px;
+}
+
+/* Responsiveness */
+
+@media(max-width: 426px) {
+    body{
+        background-position: right 40vw bottom 50vh, left 43vw top 45vh;
+    }
+    
+}
